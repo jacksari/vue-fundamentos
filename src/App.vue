@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mt-5">
+    <Counter/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import Counter from "@/components/Counter";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Counter
   }
 }
 </script>
@@ -19,9 +20,17 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  background: #2c3e50;
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @media screen and (min-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  @media screen and (min-width: 1100px) {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 </style>
