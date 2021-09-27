@@ -1,16 +1,15 @@
 <template>
-  <div class="container mt-5">
-    <Counter/>
+  <div class="container container2 p-5">
+    <Indecision/>
   </div>
 </template>
 
 <script>
-
-import Counter from "@/components/Counter";
+import Indecision from "@/components/Indecision";
 export default {
   name: 'App',
   components: {
-    Counter
+    Indecision
   }
 }
 </script>
@@ -25,6 +24,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+
+  min-height: 100vh;
   @media screen and (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -32,5 +33,8 @@ export default {
   @media screen and (min-width: 1100px) {
       grid-template-columns: 1fr 1fr 1fr;
   }
+}
+.container2{
+  grid-template-columns: 1fr;
 }
 </style>
